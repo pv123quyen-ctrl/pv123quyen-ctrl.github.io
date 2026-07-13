@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width,initial-scale=1.0">
+
+<title>Phan Văn Quyến</title>
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<!--
+###############################################################
+##################     KHU VỰC CHỈNH SỬA     ##################
+###############################################################
+
+Tên :
+Phan Văn Quyến
+
+Biệt danh :
+OVL
+
+Nghề :
+Developer Mobile
+
+Mô tả :
+Xin chào 👋
+
+Facebook :
+https://www.facebook.com/share/17onHyet2w/?mibextid=wwXIfr
+
+TikTok :
+https://www.tiktok.com/@ovl.vq
+
+Telegram :
+https://t.me/vanquyeniosvipp
+
+Discord :
+https://discord.gg/yuFpmxMm
+
+Avatar :Develop_VQ.jpg
+assets/avatar.jpg
+
+Ảnh giới thiệu :
+assets/about.jpg
+
+Ảnh nền :
+assets/background.jpg
+
+Album :
+
+photos/photo1.jpg
+
+photos/photo2.jpg
+
+photos/photo3.jpg
+
+Thư mục Download :
+
+files/
+
+Ví dụ :
+
+files/Premium.ipa
+
+files/Menu.zip
+
+files/Config.json
+
+###############################################################
+##################  KHÔNG CẦN SỬA PHÍA DƯỚI  ##################
+###############################################################
+-->
+<style>
+
+:root{
+
+--main:#8b5cf6;
+
+--glass:rgba(255,255,255,.08);
+
+--glass2:rgba(255,255,255,.12);
+
+--border:rgba(255,255,255,.18);
+
+--shadow:0 20px 60px rgba(0,0,0,.45);
+
+--text:#ffffff;
+
+}
+
+*{
+
+margin:0;
+
+padding:0;
+
+box-sizing:border-box;
+
+font-family:Poppins,sans-serif;
+
+}
+
+html{
+
+scroll-behavior:smooth;
+
+}
+
+body{
+
+overflow-x:hidden;
+
+background:#090018;
+
+color:white;
+
+min-height:100vh;
+
+}
+
+canvas{
+
+position:fixed;
+
+inset:0;
+
+z-index:-3;
+
+}
+
+#particles{
+
+position:fixed;
+
+inset:0;
+
+pointer-events:none;
+
+z-index:-2;
+
+}
+/*========================
+
+      GALAXY BACKGROUND
+
+=========================*/
+
+body{
+
+background:
+
+radial-gradient(circle at 10% 20%,
+rgba(130,90,255,.35),
+transparent 30%),
+
+radial-gradient(circle at 80% 10%,
+rgba(0,170,255,.22),
+transparent 35%),
+
+radial-gradient(circle at 80% 80%,
+rgba(170,0,255,.28),
+transparent 30%),
+
+linear-gradient(
+
+160deg,
+
+#030014,
+
+#09001d,
+
+#12002b,
+
+#19003f,
+
+#250052,
+
+#1b1b70
+
+);
+
+background-attachment:fixed;
+
+}
+
+/*========================
+
+        GLASS
+
+=========================*/
+
+.container{
+
+width:100%;
+
+display:flex;
+
+justify-content:center;
+
+padding:40px 20px;
+
+}
+
+.card{
+
+width:390px;
+
+max-width:96%;
+
+padding:28px;
+
+border-radius:30px;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(30px);
+
+-webkit-backdrop-filter:blur(30px);
+
+border:1px solid rgba(255,255,255,.15);
+
+box-shadow:
+
+0 15px 50px rgba(0,0,0,.5),
+
+inset 0 1px 1px rgba(255,255,255,.18);
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+/*========================
+
+      VIỀN KÍNH
+
+=========================*/
+
+.card::before{
+
+content:"";
+
+position:absolute;
+
+left:-40%;
+
+top:-60%;
+
+width:180%;
+
+height:180%;
+
+background:
+
+linear-gradient(
+
+120deg,
+
+transparent,
+
+rgba(255,255,255,.18),
+
+transparent
+
+);
+
+transform:rotate(25deg);
+
+animation:shine 7s linear infinite;
+
+}
+
+@keyframes shine{
+
+0%{
+
+transform:translateX(-70%) rotate(25deg);
+
+}
+
+100%{
+
+transform:translateX(70%) rotate(25deg);
+
+}
+
+}
+
+/*========================
+
+      AVATAR
+
+=========================*/
+
+.avatar{
+
+width:135px;
+
+height:135px;
+
+margin:auto;
+
+border-radius:50%;
+
+overflow:hidden;
+
+border:4px solid rgba(255,255,255,.85);
+
+box-shadow:
+
+0 0 30px #7d7dff,
+
+0 0 60px rgba(0,255,255,.35);
+
+}
+
+.avatar img{
+
+width:100%;
+
+height:100%;
+
+object-fit:cover;
+
+display:block;
+
+}
+
+/*========================
+
+       TEXT
+
+=========================*/
+
+h1{
+
+margin-top:18px;
+
+text-align:center;
+
+font-size:30px;
+
+font-weight:700;
+
+}
+
+.bio{
+
+text-align:center;
+
+margin-top:8px;
+
+opacity:.85;
+
+font-size:15px;
+
+line-height:1.6;
+
+}
+.social{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+    margin-top:28px;
+}
+
+.social a{
+    text-decoration:none;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    gap:15px;
+    padding:16px 18px;
+    border-radius:18px;
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.12);
+    backdrop-filter:blur(18px);
+    transition:.35s;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+.social a:hover{
+    transform:translateY(-4px) scale(1.02);
+    background:rgba(255,255,255,.14);
+    border-color:#7b61ff;
+    box-shadow:0 0 25px rgba(123,97,255,.45);
+}
+
+.social i{
+    width:48px;
+    height:48px;
+    border-radius:14px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:22px;
+    background:linear-gradient(135deg,#8b5cf6,#4f46e5);
+}
+
+.about{
+    margin-top:28px;
+    padding:20px;
+    border-radius:22px;
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.12);
+}
+
+.about h2{
+    text-align:center;
+    margin-bottom:15px;
+    font-size:22px;
+}
+
+.about img{
+    width:100%;
+    border-radius:18px;
+    display:block;
+}
+
+.about p{
+    margin-top:15px;
+    text-align:center;
+    line-height:1.7;
+    opacity:.9;
+}
+
+.gallery{
+    margin-top:25px;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:12px;
+}
+
+.gallery img{
+    width:100%;
+    height:150px;
+    object-fit:cover;
+    border-radius:16px;
+    transition:.35s;
+}
+
+.gallery img:hover{
+    transform:scale(1.04);
+}
+
+.download{
+    margin-top:28px;
+    padding:18px;
+    border-radius:22px;
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.12);
+}
+
+.download h2{
+    text-align:center;
+    margin-bottom:15px;
+}
+
+.file{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-top:12px;
+    padding:14px;
+    border-radius:16px;
+    background:rgba(255,255,255,.08);
+}
+
+.file a{
+    color:#fff;
+    text-decoration:none;
+    padding:10px 18px;
+    border-radius:12px;
+    background:linear-gradient(135deg,#7b61ff,#4f46e5);
+}
+
+.footer{
+    text-align:center;
+    margin:30px 0 10px;
+    opacity:.7;
+    font-size:14px;
+}
+
+@media(max-width:480px){
+    .card{
+        width:100%;
+        padding:22px;
+    }
+
+    .gallery{
+        grid-template-columns:1fr;
+    }
+
+    h1{
+        font-size:26px;
+    }
+}
+</style>
+
+</head>
+
+<body>
+
+<canvas id="galaxy"></canvas>
+
+<div id="particles"></div>
+
+<div class="container">
+
+<div class="card">
+
+<div class="avatar">
+<img src="assets/avatar.jpg" alt="Avatar">
+</div>
+
+<h1>Phan Văn Quyến</h1>
+
+<p class="bio">
+Developer Mobile<br>
+Chào mừng đến với website.
+</p>
+
+<div class="social">
+
+<a href="https://www.facebook.com/share/17onHyet2w/?mibextid=wwXIfr" target="_blank">
+<i class="fab fa-facebook-f"></i>
+<span>Facebook</span>
+</a>
+
+<a href="https://www.tiktok.com/@ovl.vq?_r=1&_t=ZS-97zVmbKnWvY" target="_blank">
+<i class="fab fa-tiktok"></i>
+<span>TikTok</span>
+</a>
+
+<a href="https://t.me/vanquyeniosvipp" target="_blank">
+<i class="fab fa-telegram-plane"></i>
+<span>Telegram</span>
+</a>
+
+<a href="https://discord.gg/yuFpmxMm" target="_blank">
+<i class="fab fa-discord"></i>
+<span>Discord</span>
+</a>
+
+</div>
+
+<div class="about">
+
+<h2>📸 Giới thiệu</h2>
+
+<img src="assets/about.jpg" alt="Giới thiệu">
+
+<p>
+Xin chào! Mình là <b>Phan Văn Quyến</b>.<br>
+Cảm ơn bạn đã ghé thăm website.
+</p>
+
+<div class="gallery">
+
+<img src="photos/photo1.jpg" alt="">
+<img src="photos/photo2.jpg" alt="">
+<img src="photos/photo3.jpg" alt="">
+<img src="photos/photo4.jpg" alt="">
+
+</div>
+
+</div>
+<!-- ================================================ -->
+<!-- ================= ADMIN ================= -->
+
+<div id="adminPanel" style="display:none">
+
+<h2 style="color:white;text-align:center">
+🔒 ADMIN PANEL
+</h2>
+
+<input
+type="password"
+id="pass"
+placeholder="Nhập mật khẩu">
+
+<button onclick="loginAdmin()">
+Đăng nhập
+</button>
+
+<div id="adminArea" style="display:none">
+
+<h3>Quản trị Website</h3>
+
+<p>✔ Đổi avatar</p>
+<input type="Develop_VQ.jpg" id="avatarUpload">
+
+<p>✔ Đổi ảnh giới thiệu</p>
+<input type="Develop_VQ.jpg" id="aboutUpload">
+
+</div>
+
+</div>
+
+<style>
+
+#adminPanel{
+margin-top:40px;
+padding:20px;
+background:rgba(255,255,255,.08);
+border-radius:20px;
+backdrop-filter:blur(20px);
+}
+
+#adminPanel input{
+width:100%;
+padding:12px;
+margin:8px 0;
+border-radius:10px;
+border:none;
+}
+
+#adminPanel button{
+width:100%;
+padding:12px;
+border:none;
+border-radius:10px;
+background:#2196f3;
+color:white;
+font-weight:bold;
+}
+
+</style>
+
+<script>
+
+const PASSWORD="123456";
+
+if(location.hash=="#admin"){
+document.getElementById("adminPanel").style.display="block";
+}
+
+function loginAdmin(){
+
+if(document.getElementById("pass").value==PASSWORD){
+
+document.getElementById("adminArea").style.display="block";
+
+}else{
+
+alert("Sai mật khẩu");
+
+}
+
+}
+
+function themFile(){
+
+alert("Bạn sẽ tự thêm file vào HTML.");
+
+}
+
+</script>
+
+<!-- ================= END ADMIN ================= -->
+<h2 style="text-align:center;color:white;margin-top:40px">
+<!-- ================= PRIVATE NOTE ================= -->
+
+<div id="privateNote" style="display:none">
+
+<h2 style="color:white;text-align:center">
+📝 GHI CHÚ RIÊNG
+</h2>
+
+<textarea id="noteArea"
+placeholder="Viết ghi chú ở đây..."
+style="
+width:100%;
+height:220px;
+padding:15px;
+border:none;
+border-radius:15px;
+font-size:16px;
+background:rgba(255,255,255,.08);
+color:white;
+resize:none;
+"></textarea>
+
+<br><br>
+
+<button onclick="saveNote()"
+style="
+width:100%;
+padding:12px;
+border:none;
+border-radius:12px;
+background:#00b894;
+color:white;
+font-weight:bold;">
+💾 Lưu ghi chú
+</button>
+
+</div>
+
+<script>
+
+if(location.hash=="#admin"){
+document.getElementById("privateNote").style.display="block";
+}
+
+noteArea.value=localStorage.getItem("ADMIN_NOTE")||"";
+
+function saveNote(){
+
+localStorage.setItem(
+"ADMIN_NOTE",
+noteArea.value
+);
+
+alert("Đã lưu.");
+
+}
+
+</script>
+
+<!-- ================= END PRIVATE NOTE ================= -->
+<script>
+
+for(let i=0;i<80;i++){
+
+let s=document.createElement("div");
+
+s.style.position="fixed";
+
+s.style.left=Math.random()*100+"vw";
+
+s.style.top=Math.random()*100+"vh";
+
+s.style.width="2px";
+
+s.style.height="2px";
+
+s.style.borderRadius="50%";
+
+s.style.background="white";
+
+s.style.opacity=Math.random();
+
+s.style.pointerEvents="none";
+
+s.style.animation="blink "+(2+Math.random()*5)+"s infinite";
+
+document.body.appendChild(s);
+
+}
+
+</script>
+<style>
+
+@keyframes blink{
+
+0%,100%{
+
+opacity:.2;
+
+}
+
+50%{
+
+opacity:1;
+
+}
+
+}
+
+</style>
+<!-- ================= PHẦN 10 ================= -->
+
+<div id="loading">
+<div class="loader"></div>
+<h2>Welcome...</h2>
+</div>
+
+<button id="topBtn">⬆</button>
+
+<div id="clock"></div>
+
+<style>
+
+#loading{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:#070b18;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+z-index:99999;
+transition:.8s;
+}
+
+.loader{
+width:70px;
+height:70px;
+border-radius:50%;
+border:5px solid rgba(255,255,255,.2);
+border-top:5px solid #00bfff;
+animation:spin 1s linear infinite;
+}
+
+@keyframes spin{
+to{
+transform:rotate(360deg);
+}
+}
+
+#topBtn{
+position:fixed;
+right:20px;
+bottom:20px;
+width:50px;
+height:50px;
+border:none;
+border-radius:50%;
+background:#00bfff;
+color:white;
+font-size:22px;
+cursor:pointer;
+display:none;
+box-shadow:0 0 20px #00bfff;
+}
+
+#clock{
+position:fixed;
+top:18px;
+right:18px;
+padding:10px 14px;
+border-radius:12px;
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(20px);
+color:white;
+font-size:14px;
+}
+
+</style>
+
+<script>
+
+window.addEventListener("load",()=>{
+
+setTimeout(()=>{
+
+loading.style.opacity="0";
+
+setTimeout(()=>{
+
+loading.remove();
+
+},800);
+
+},1200);
+
+});
+
+topBtn.onclick=()=>{
+
+window.scrollTo({
+
+top:0,
+
+behavior:"smooth"
+
+});
+
+};
+
+window.onscroll=()=>{
+
+topBtn.style.display=
+
+window.scrollY>300?
+
+"block":"none";
+
+};
+
+setInterval(()=>{
+
+let d=new Date();
+
+clock.innerHTML=
+
+d.toLocaleTimeString("vi-VN");
+
+},1000);
+</script>
+
+<style>
+
+@keyframes blink{
+
+0%,100%{
+
+opacity:.2;
+
+}
+
+50%{
+
+opacity:1;
+
+}
+
+}
+</style>
+<!-- =============== HẾT PHẦN 10 =============== -->
